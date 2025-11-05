@@ -14,11 +14,11 @@
 		"_sndType": "FCS20",
 		"_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
 	    "_data": [
-			"manaCost = 1, hp = 25, zoc = 240, parry = 3, atkMin = 1",
 			"manaCost = 1, hp = 50, zoc = 240, parry = 6, atkMin = 3",
 			"manaCost = 1, hp = 75, zoc = 240, parry = 10, atkMin = 7",
 			"manaCost = 1, hp = 100, zoc = 240, parry = 15, atkMin = 14",
-			"manaCost = 1, hp = 125, zoc = 240, parry = 20, atkMin = 20"
+			"manaCost = 1, hp = 125, zoc = 240, parry = 20, atkMin = 20",
+			"manaCost = 1, hp = 200, zoc = 240, parry = 30, atkMin = 40"
         ],
         "_skills": [
             {
@@ -43,11 +43,11 @@
                 "wikiTips": "atk",
                 "castType": "pass",
                 "objMod": [
-                    "atk +5",
-                    "atk +7",
                     "atk +9",
                     "atk +12",
-                    "atk +25"
+                    "atk +25",
+                    "atk +50",
+                    "atk +80"
                 ]
             },
             {
@@ -59,11 +59,11 @@
                 "snd": "hit slash~3, miss miss~3",
                 "castType": "objAction, , caster isAlly, caster tag hero, selfNotFrozen, skillCastType",
                 "data": [
-                    "type = charge, zoc = 640, atk = 2, chargeTime = 0.1",
-                    "type = charge, zoc = 640, atk = 3, chargeTime = 0.1",
                     "type = charge, zoc = 640, atk = 4, chargeTime = 0.1",
                     "type = charge, zoc = 640, atk = 5, chargeTime = 0.1",
-                    "type = charge, zoc = 640, atk = 6, chargeTime = 0.1"
+                    "type = charge, zoc = 640, atk = 6, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 8, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 10, chargeTime = 0.1"
                 ]
             }
         ],
@@ -84,11 +84,11 @@
 		"_sndType": "FCS20",
 		"_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
 	    "_data": [
-			"manaCost = 1, hp = 25, zoc = 240, parry = 3, atkMin = 2",
-			"manaCost = 1, hp = 50, zoc = 240, parry = 6, atkMin = 4",
 			"manaCost = 1, hp = 75, zoc = 240, parry = 10, atkMin = 8",
 			"manaCost = 1, hp = 100, zoc = 240, parry = 15, atkMin = 16",
-			"manaCost = 1, hp = 125, zoc = 240, parry = 20, atkMin = 24"
+			"manaCost = 1, hp = 125, zoc = 240, parry = 20, atkMin = 24",
+			"manaCost = 1, hp = 150, zoc = 240, parry = 20, atkMin = 32",
+			"manaCost = 1, hp = 200, zoc = 240, parry = 20, atkMin = 48"
         ],
         "_skills": [
             {
@@ -99,11 +99,11 @@
                 "fxHit": "parHit_base_gold",
                 "snd": "hit slash~3, miss miss~3",
                 "data": [
-                    "type = charge, atk = 5",
-                    "type = charge, atk = 7",
                     "type = charge, atk = 9",
                     "type = charge, atk = 12",
-                    "type = charge, atk = 25"
+                    "type = charge, atk = 25",
+                    "type = charge, atk = 35",
+                    "type = charge, atk = 45"
                 ]
             },
             {
@@ -113,11 +113,11 @@
                 "wikiTips": "atk",
                 "castType": "pass",
                 "objMod": [
-                    "atk +5",
-                    "atk +7",
                     "atk +9",
                     "atk +12",
-                    "atk +25"
+                    "atk +25",
+                    "atk +35",
+                    "atk +45"
                 ]
             },
             {
@@ -129,11 +129,11 @@
                 "snd": "hit slash~3, miss miss~3",
                 "castType": "objAction, , caster isAlly, caster tag hero, selfNotFrozen, skillCastType",
                 "data": [
-                    "type = charge, zoc = 640, atk = 2, chargeTime = 0.1",
-                    "type = charge, zoc = 640, atk = 3, chargeTime = 0.1",
-                    "type = charge, zoc = 640, atk = 4, chargeTime = 0.1",
-                    "type = charge, zoc = 640, atk = 5, chargeTime = 0.1",
-                    "type = charge, zoc = 640, atk = 6, chargeTime = 0.1"
+                    "type = charge, zoc = 640, atk = 12, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 23, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 34, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 45, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 56, chargeTime = 0.1"
                 ]
             }
         ],
@@ -173,11 +173,11 @@
                 "fxEnd": "parHit_magic_fire 1.35",
                 "snd": "cast castFire, hit hitFireL",
                 "data": [
-                    "type = castDir, passBlock=abyss, atkM = 8, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
-                    "type = castDir, passBlock=abyss, atkM = 16, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
+                    "type = castDir, passBlock=abyss, atkM = 18, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
+                    "type = castDir, passBlock=abyss, atkM = 26, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
                     "type = castDir, passBlock=abyss, atkM = 32, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
-                    "type = castDir, passBlock=abyss, atkM = 64, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
-                    "type = castDir, passBlock=abyss, atkM = 128, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3"
+                    "type = castDir, passBlock=abyss, atkM = 44, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
+                    "type = castDir, passBlock=abyss, atkM = 138, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3"
                 ]
             },
             {
@@ -190,11 +190,11 @@
                 "castType": "castHit, , caster isSelf, isCfgSkill",
                 "exData": "posEvt",
                 "data": [
-                    "type = castPos, passBlock=abyss wall, atkM=3, hitRadius=160, atkTimes=-100, exDamage=2",
-                    "type = castPos, passBlock=abyss wall, atkM=6, hitRadius=160, atkTimes=-100, exDamage=2",
-                    "type = castPos, passBlock=abyss wall, atkM=12, hitRadius=160, atkTimes=-100, exDamage=2",
-                    "type = castPos, passBlock=abyss wall, atkM=24, hitRadius=160, atkTimes=-100, exDamage=2",
-                    "type = castPos, passBlock=abyss wall, atkM=48, hitRadius=160, atkTimes=-100, exDamage=2"
+                    "type = castPos, passBlock=abyss wall, atkM=13, hitRadius=160, atkTimes=-100, exDamage=2",
+                    "type = castPos, passBlock=abyss wall, atkM=26, hitRadius=160, atkTimes=-100, exDamage=2",
+                    "type = castPos, passBlock=abyss wall, atkM=32, hitRadius=160, atkTimes=-100, exDamage=2",
+                    "type = castPos, passBlock=abyss wall, atkM=44, hitRadius=160, atkTimes=-100, exDamage=2",
+                    "type = castPos, passBlock=abyss wall, atkM=58, hitRadius=160, atkTimes=-100, exDamage=2"
                 ]
             },
             {
