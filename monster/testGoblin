@@ -1,0 +1,49 @@
+[
+	{
+		"_id": "mon_goblin1",
+		"_name": "脑残女刀客",
+		"_desc": "脑子坏掉了，投敌哥布林",
+        "_img": "GregRes/enemy_katana_ic.png",
+		"_cardImg": "GregRes/enemy_katana.png",
+		"_imgFaceR": false,
+        "_snd": "-0.04|hit humanF_hit~2, hitL humanF_hitL~2, die humanF_die",
+		"_powerCost": 1,
+		"_tag": "goblin zaku melee",
+		"_data": [
+			"hp = 10, randAtk = 3",
+			"hp = 20, randAtk = 6",
+			"hp = 40, randAtk = 12",
+			"hp = 80, randAtk = 24",
+			"hp = 160, randAtk = 48"
+		],
+		"_skills": [
+			{
+				"id": "base",
+				"fxCast": "parCast_move",
+				"fxHit": "parHit_base_gold",
+				"snd": "hit stab~3, miss miss~3",
+				"data": [
+					"type = charge, atk = 1, chargeSpeed = 1200, chargeEnd = 2",
+					"type = charge, atk = 2, chargeSpeed = 1200, chargeEnd = 2",
+					"type = charge, atk = 4, chargeSpeed = 1200, chargeEnd = 2",
+					"type = charge, atk = 8, chargeSpeed = 1200, chargeEnd = 2",
+					"type = charge, atk = 16, chargeSpeed = 1200, chargeEnd = 2"
+				],
+			},
+			{
+				"id": "skill_1",
+				"name": "慌乱",
+				"desc": "只会到处乱跑",
+				"ani": "start async col shake 1 8",
+				"castType": "objKill, aimSelf, target isAlly, caster isEnemy, !self hasBuff faint, rate 0.05",
+				"data": ["type = buff"],
+				"buffs":[
+					"faint",
+					]
+			}
+		],
+		"_ai": [
+			"rand 65"
+		]
+	},
+]
