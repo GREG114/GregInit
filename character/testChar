@@ -1,0 +1,148 @@
+[
+    //女忍者
+	{
+        "_name": "女忍者",
+        "_desc": " ",
+        "_id": "zaku_base_spear",
+        "_pfb": "char",
+        "_img": "GregRes/npc_knife_ic.png",
+        "_cardImg": "GregRes/npc_knife.png",
+        "_showSize": 44,
+        "_tag": "unit0 melee um",
+        "_sort": 18000,
+        "_trueName": "classMelee",
+		"_sndType": "FCS20",
+		"_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
+	        "_data": [
+			"manaCost = 1, hp = 25, zoc = 240, parry = 3, atkMin = 1",
+			"manaCost = 1, hp = 50, zoc = 240, parry = 6, atkMin = 2",
+			"manaCost = 1, hp = 75, zoc = 240, parry = 10, atkMin = 4",
+			"manaCost = 1, hp = 100, zoc = 240, parry = 15, atkMin = 8",
+			"manaCost = 1, hp = 125, zoc = 240, parry = 20, atkMin = 16"
+        ],
+        "_skills": [
+            {
+                "name": null,
+                "desc": null,
+                "id": "base",
+                "fxCast": "parCast_move",
+                "fxHit": "parHit_base_gold",
+                "snd": "hit slash~3, miss miss~3",
+                "data": [
+                    "type = charge, atk = 4",
+                    "type = charge, atk = 6",
+                    "type = charge, atk = 8",
+                    "type = charge, atk = 10",
+                    "type = charge, atk = 12"
+                ]
+            },
+            {
+                "name": "铁制长矛",
+                "desc": "攻击+{0} #2 #3 #4 #5 #6",
+                "id": "skill_1",
+                "wikiTips": "atk",
+                "castType": "pass",
+                "objMod": [
+                    "atk +2",
+                    "atk +3",
+                    "atk +4",
+                    "atk +5",
+                    "atk +6"
+                ]
+            },
+            {
+                "name": "跟随突击",
+                "desc": "跟随英雄攻击的方向冲锋",
+                "id": "skill_2",
+                "fxCast": "parCast_move",
+                "fxHit": "parHit_base_gold",
+                "snd": "hit slash~3, miss miss~3",
+                "castType": "objAction, , caster isAlly, caster tag hero, selfNotFrozen, skillCastType",
+                "data": [
+                    "type = charge, zoc = 640, atk = 2, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 3, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 4, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 5, chargeTime = 0.1",
+                    "type = charge, zoc = 640, atk = 6, chargeTime = 0.1"
+                ]
+            }
+        ],
+        "_campSkillDesc": null
+    },
+	//火遁女忍
+	{
+        "_name": "火遁少女",
+        "_desc": "很会玩火的女人",
+        "_id": "zaku_base_aoe",
+        "_pfb": "char",
+        "_img": "GregRes/npc_test_ic.png",
+        "_cardImg": "GregRes/npc_test.png",
+        "_cardBg": "purple",
+        "_showSize": 44,
+        "_tag": "unit1 aoe uao",
+        "_sort": 37999,
+        "_trueName": "classMage",
+        "_sndType": "FCS23",
+        "_snd": "+0.035|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
+         "_data": [
+            "manaCost = 2, hp = 24, zoc = 90",
+            "manaCost = 2, hp = 48, zoc = 90",
+            "manaCost = 2, hp = 96, zoc = 90",
+            "manaCost = 2, hp = 144, zoc = 90",
+            "manaCost = 2, hp = 208, zoc = 90"
+        ],
+        "_skills": [
+            {
+                "name": null,
+                "desc": null,
+                "id": "fireball",
+                "ani": "cast async col punch 0.1 20",
+                "fxCast": "parCast_magic_fire",
+                "fx": "parFly_fireball",
+                "fxHit": "parHit_magic_fire 1.35",
+                "fxEnd": "parHit_magic_fire 1.35",
+                "snd": "cast castFire, hit hitFireL",
+                "data": [
+                    "type = castDir, passBlock=abyss, atkM = 8, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
+                    "type = castDir, passBlock=abyss, atkM = 16, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
+                    "type = castDir, passBlock=abyss, atkM = 32, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
+                    "type = castDir, passBlock=abyss, atkM = 64, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
+                    "type = castDir, passBlock=abyss, atkM = 128, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3"
+                ]
+            },
+            {
+                "name": "导引火球",
+                "desc": "向移动友军停下的位置发射1颗火球",
+                "id": "skill_3",
+                "ani": "cast async col punch 0.1 20",
+                "fxCast": "parCast_magic_fire",
+                "fx": "parFly_fireball",
+                "fxHit": "parHit_magic_fire",
+                "snd": "cast castFire, hit hitFireL",
+                "castType": "objStop, aimCaster, caster isAlly, skillTag melee move, selfNotFrozen, skillCastType",
+                "data": [
+                    "type = castDir, passBlock=abyss, zoc=1600, atkM=4, hitRadius=200, flyCol=60, flySpeed=1200, playTime=0.5",
+                    "type = castDir, passBlock=abyss, zoc=1600, atkM=8, hitRadius=200, flyCol=60, flySpeed=1200, playTime=0.5",
+                    "type = castDir, passBlock=abyss, zoc=1600, atkM=16, hitRadius=200, flyCol=60, flySpeed=1200, playTime=0.5",
+                    "type = castDir, passBlock=abyss, zoc=1600, atkM=32, hitRadius=200, flyCol=60, flySpeed=1200, playTime=0.5",
+                    "type = castDir, passBlock=abyss, zoc=1600, atkM=64, hitRadius=200, flyCol=60, flySpeed=1200, playTime=0.5"
+                ]
+            },
+            {
+                "name": "魔能聚焦",
+                "desc": "魔法+{0} #2 #4 #8 #16 #24",
+                "id": "skill_2",
+                "wikiTips": "atkM",
+                "castType": "pass",
+                "objMod": [
+                    "atkM +2",
+                    "atkM +4",
+                    "atkM +8",
+                    "atkM +16",
+                    "atkM +24"
+                ]
+            }
+        ],
+        "_campSkillDesc": null
+    },
+]
