@@ -18,7 +18,7 @@
 			"manaCost = 1, hp = 100, zoc = 240, parry = 10, atkMin = 7",
 			"manaCost = 1, hp = 170, zoc = 240, parry = 15, atkMin = 14",
 			"manaCost = 1, hp = 250, zoc = 240, parry = 20, atkMin = 20",
-			"manaCost = 1, hp = 300, zoc = 240, parry = 30, atkMin = 40"
+			"manaCost = 1, hp = 300, zoc = 240, parry = 50, atkMin = 50"
         ],
         "_skills": [
             {
@@ -85,10 +85,10 @@
 		"_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
 	    "_data": [
 			"manaCost = 1, hp = 75, zoc = 240, parry = 10, atkMin = 8",
-			"manaCost = 1, hp = 100, zoc = 240, parry = 15, atkMin = 16",
-			"manaCost = 1, hp = 175, zoc = 240, parry = 20, atkMin = 24",
-			"manaCost = 1, hp = 250, zoc = 240, parry = 20, atkMin = 32",
-			"manaCost = 1, hp = 300, zoc = 240, parry = 20, atkMin = 48"
+			"manaCost = 1, hp = 150, zoc = 240, parry = 15, atkMin = 16",
+			"manaCost = 1, hp = 275, zoc = 240, parry = 20, atkMin = 24",
+			"manaCost = 1, hp = 450, zoc = 440, parry = 20, atkMin = 32",
+			"manaCost = 1, hp = 700, zoc = 440, parry = 120, atkMin = 88"
         ],
         "_skills": [
             {
@@ -175,9 +175,9 @@
                 "data": [
                     "type = castDir, passBlock=abyss, atkM = 18, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
                     "type = castDir, passBlock=abyss, atkM = 26, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
-                    "type = castDir, passBlock=abyss, atkM = 32, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
-                    "type = castDir, passBlock=abyss, atkM = 44, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3",
-                    "type = castDir, passBlock=abyss, atkM = 138, playTime=0.35, atkTimes=3, castAngle=30, flySpread=3"
+                    "type = castDir, passBlock=abyss, atkM = 32, playTime=0.35, atkTimes=3, castAngle=30, flySpread=5",
+                    "type = castDir, passBlock=abyss, atkM = 44, playTime=0.35, atkTimes=3, castAngle=30, flySpread=7",
+                    "type = castDir, passBlock=abyss, atkM = 138, playTime=0.35, atkTimes=3, castAngle=30, flySpread=9"
                 ]
             },
             {
