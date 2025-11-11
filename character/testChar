@@ -14,11 +14,11 @@
 		"_sndType": "FCS20",
 		"_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
 	    "_data": [
-			"manaCost = 1, hp = 50, zoc = 240, parry = 6, atkMin = 3",
-			"manaCost = 1, hp = 100, zoc = 240, parry = 10, atkMin = 7",
-			"manaCost = 1, hp = 170, zoc = 240, parry = 15, atkMin = 14",
-			"manaCost = 1, hp = 250, zoc = 240, parry = 20, atkMin = 20",
-			"manaCost = 1, hp = 300, zoc = 240, parry = 50, atkMin = 50"
+			"manaCost = 1, hp = 75, zoc = 240, parry = 6, atkMin = 7",
+			"manaCost = 1, hp = 150, zoc = 240, parry = 10, atkMin = 14",
+			"manaCost = 1, hp = 300, zoc = 240, parry = 15, atkMin = 28",
+			"manaCost = 1, hp = 600, zoc = 240, parry = 20, atkMin = 56",
+			"manaCost = 1, hp = 1200, zoc = 240, parry = 50, atkMin = 128"
         ],
         "_skills": [
             {
@@ -71,7 +71,7 @@
     },
      //女忍者
 	{
-        "_name": "女忍者",
+        "_name": "短发女忍者",
         "_desc": " ",
         "_id": "zaku_base_kunai",
         "_pfb": "char",
@@ -84,11 +84,11 @@
 		"_sndType": "FCS20",
 		"_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
 	    "_data": [
-			"manaCost = 1, hp = 75, zoc = 240, parry = 10, atkMin = 8",
-			"manaCost = 1, hp = 150, zoc = 240, parry = 15, atkMin = 16",
-			"manaCost = 1, hp = 275, zoc = 240, parry = 20, atkMin = 24",
-			"manaCost = 1, hp = 450, zoc = 440, parry = 20, atkMin = 32",
-			"manaCost = 1, hp = 700, zoc = 440, parry = 120, atkMin = 88"
+			"manaCost = 1, hp = 100, zoc = 240, parry = 10, atkMin = 8",
+			"manaCost = 1, hp = 200, zoc = 240, parry = 15, atkMin = 16",
+			"manaCost = 1, hp = 400, zoc = 240, parry = 20, atkMin = 32",
+			"manaCost = 1, hp = 800, zoc = 440, parry = 20, atkMin = 64",
+			"manaCost = 1, hp = 1200, zoc = 440, parry = 120, atkMin = 128"
         ],
         "_skills": [
             {
@@ -155,11 +155,11 @@
         "_sndType": "FCS23",
         "_snd": "+0.035|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
          "_data": [
-            "manaCost = 2, hp = 24, zoc = 90",
-            "manaCost = 2, hp = 98, zoc = 90",
-            "manaCost = 2, hp = 136, zoc = 90",
-            "manaCost = 2, hp = 244, zoc = 90",
-            "manaCost = 2, hp = 408, zoc = 90"
+            "manaCost = 2, hp = 60, zoc = 90",
+            "manaCost = 2, hp = 120, zoc = 90",
+            "manaCost = 2, hp = 240, zoc = 90",
+            "manaCost = 2, hp = 480, zoc = 90",
+            "manaCost = 2, hp = 960, zoc = 90"
         ],
         "_skills": [
             {
