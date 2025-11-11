@@ -214,4 +214,100 @@
         ],
         "_campSkillDesc": null
     },
+    {
+        "_name": "镜流",
+        "_desc": "裁决之剑",
+        "_id": "hero_jingliu",
+        "_pfb": "hero",
+        "_img": "GregRes/hero_jingliu_ic.png",
+        "_cardImg": "GregRes/hero_jingliu.png",
+        "_cardBg": "red",
+        "_showSize": 44,
+        "_tag": "hero melee",
+        "_sort": 0,
+        "_trueName": "纯爱天使",
+        "_sndType": "FCS20",
+        "_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
+        "_equipType": "2Hand mArmor ring necklace shoe helm misc",
+        "_data": [
+            "manaCost = 1, hp = 100, zoc = 480, parry = 3, atkMin = 1",
+            "manaCost = 1, hp = 200, zoc = 480, parry = 6, atkMin = 2",
+            "manaCost = 1, hp = 400, zoc = 480, parry = 12, atkMin = 4",
+            "manaCost = 1, hp = 800, zoc = 480, parry = 24, atkMin = 8",
+            "manaCost = 1, hp = 1600, zoc = 480, parry = 48, atkMin = 16"
+        ],
+        "_skills": [
+            {
+                "name": null,
+                "desc": null,
+                "id": "base",
+                "fxCast": "parCast_move",
+                "fxHit": "parHit_base_gold",
+                "snd": "hit slash~3, miss miss~3",
+                "data": [
+                    "type = charge, atk = 7",
+                    "type = charge, atk = 14",
+                    "type = charge, atk = 28",
+                    "type = charge, atk = 56",
+                    "type = charge, atk = 84"
+                ]
+            },
+            {
+                "name": "斗志高涨",
+                "desc": "每击中1个不同的敌人+{0}攻击 #$@0_1+buffLv",
+                "id": "skill_1",
+                "wikiTips": "atk",
+                "castType": "objHit, aimSelf, caster isSelf",
+                "data": [
+                    "type = buff, trigger = -1"
+                ],
+                "buffs": [
+                    "atkAdd 1 1",
+                    "atkAdd 2 2",
+                    "atkAdd 4 4",
+                    "atkAdd 8 8",
+                    "atkAdd 16 16"
+                ]
+            },
+            {
+                "name": "少女怪力",
+                "desc": "在场时，攻击牌伤害+{0:0%} #$@0_3",
+                "id": "skill_2",
+                "castType": "objStay, aimSelf, caster isSelf",
+                "data": [
+                    "type = buff"
+                ],
+                "buffs": [
+                    "#card atk atkX +0.5",
+                    "#card atk atkX +0.6",
+                    "#card atk atkX +0.7",
+                    "#card atk atkX +0.85",
+                    "#card atk atkX +1.0"
+                ]
+            },
+            {
+                "name": "裁决之剑",
+                "desc": "击中敌人时，额外召唤圣剑刺向敌人",
+                "id": "skill_3",
+                "fx": "flyDelay fly_dagger 16/96x2 1 1 1 false true #ffff20c0",
+                "fxHit": "parHit_base_gold",
+                "snd": "cast castFloatSword, hit slash~3, miss missArrow~3",
+                "castType": "objHit, aimTarget, caster isSelf, target isEnemy, skillCastType",
+                "exData": "posTarget floatSwordInst 320 640 10 350 0.382 lockPos",
+                "data": [
+                    "type = castDir, passBlock=abyss wall block, flySpread = -100, pierce = 2, atk=3, playTime=0, atkTimes=1, aimError = 32, flyCol=40",
+                    "type = castDir, passBlock=abyss wall block, flySpread = -100, pierce = 2, atk=6, playTime=0, atkTimes=1, aimError = 32, flyCol=40",
+                    "type = castDir, passBlock=abyss wall block, flySpread = -100, pierce = 2, atk=12, playTime=0, atkTimes=1, aimError = 32, flyCol=40",
+                    "type = castDir, passBlock=abyss wall block, flySpread = -100, pierce = 2, atk=24, playTime=0, atkTimes=1, aimError = 32, flyCol=40",
+                    "type = castDir, passBlock=abyss wall block, flySpread = -100, pierce = 2, atk=48, playTime=0, atkTimes=1, aimError = 32, flyCol=40"
+                ]
+            }
+        ],
+        "_initSkills": "skill_3=0",
+        "_campSkillCmd": "getDungeonInfo true, snd paper, showTip clear tip_spotDungeon",
+        "_initPersonality": "cheerful",
+        "_initAge": 14,
+        "_initAgeMax": 100,
+        "_campSkillDesc": "侦察并获得任务地图信息"
+    },
 ]
