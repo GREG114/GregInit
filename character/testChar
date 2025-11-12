@@ -107,17 +107,19 @@
                 ]
             },
             {
-                "name": "铁制苦无",
-                "desc": "攻击+{0} #5 #7 #9 #12 #25",
+                "name": "剑刃旋风",
+                "desc": "突击时持续发动旋风斩",
                 "id": "skill_1",
-                "wikiTips": "atk",
-                "castType": "pass",
-                "objMod": [
-                    "atk +9",
-                    "atk +12",
-                    "atk +25",
-                    "atk +35",
-                    "atk +45"
+                "fx": "aoe_slashCircle gfx_slashCircle Ox2 1 1 1 false true #ffffdfff",
+                "fxHit": "parHit_base_gold",
+                "snd": "cast castCircleSlash, hit slash~3, miss miss~3",
+                "castType": "objMove, aimSelf, caster isSelf",
+                "data": [
+                    "type = castPos, hitRadius = 240, playTime = 0.2, atk = 1, atkTimes = -100",
+                    "type = castPos, hitRadius = 240, playTime = 0.2, atk = 2, atkTimes = -100",
+                    "type = castPos, hitRadius = 240, playTime = 0.2, atk = 4, atkTimes = -100",
+                    "type = castPos, hitRadius = 240, playTime = 0.2, atk = 8, atkTimes = -100",
+                    "type = castPos,  hitRadius = 240, playTime = 0.2, atk = 16, atkTimes = -100"
                 ]
             },
             {
@@ -222,19 +224,20 @@
         "_img": "GregRes/hero_jingliu_ic.png",
         "_cardImg": "GregRes/hero_jingliu.png",
         "_cardBg": "red",
-        "_showSize": 44,
-        "_tag": "hero melee",
+        "_showSize": 60,
+        "_colSize": 60,		
+        "_tag": "hero melee init",
         "_sort": 0,
         "_trueName": "纯爱天使",
         "_sndType": "FCS20",
         "_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
         "_equipType": "2Hand mArmor ring necklace shoe helm misc",
         "_data": [
-            "manaCost = 1, hp = 100, zoc = 480, parry = 3, atkMin = 1",
-            "manaCost = 1, hp = 200, zoc = 480, parry = 6, atkMin = 2",
-            "manaCost = 1, hp = 400, zoc = 480, parry = 12, atkMin = 4",
-            "manaCost = 1, hp = 800, zoc = 480, parry = 24, atkMin = 8",
-            "manaCost = 1, hp = 1600, zoc = 480, parry = 48, atkMin = 16"
+            "manaCost = 1, hp = 200, zoc = 480, parry = 3, atkMin = 1",
+            "manaCost = 1, hp = 400, zoc = 480, parry = 6, atkMin = 2",
+            "manaCost = 1, hp = 800, zoc = 480, parry = 12, atkMin = 4",
+            "manaCost = 1, hp = 1600, zoc = 480, parry = 24, atkMin = 8",
+            "manaCost = 1, hp = 3200, zoc = 480, parry = 48, atkMin = 16"
         ],
         "_skills": [
             {
@@ -303,11 +306,118 @@
                 ]
             }
         ],
-        "_initSkills": "skill_3=0",
+        "_initSkills": "skill_1=0",
         "_campSkillCmd": "getDungeonInfo true, snd paper, showTip clear tip_spotDungeon",
         "_initPersonality": "cheerful",
         "_initAge": 14,
         "_initAgeMax": 100,
         "_campSkillDesc": "侦察并获得任务地图信息"
+    },
+    {
+        "_name": "王佩",
+        "_desc": "纯爱之光",
+        "_id": "hero_wangpei",
+        "_pfb": "hero",
+        "_img": "GregRes/hero_wangpei_ic.png",
+        "_cardImg": "GregRes/hero_wangpei.png",
+        "_cardBg": "red",
+        "_showSize": 80,
+        "_colSize": 40,		
+        "_tag": "hero assist init blessed",
+        "_sort": 0,
+        "_trueName": "纯爱天使",
+        "_sndType": "FCS20",
+        "_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
+        "_equipType": "sp clothes ring necklace shoe helm misc",
+        "_data": [
+            "manaCost = 1, hp = 120, zoc = 480, parry = 8, atkMin = 2",
+            "manaCost = 1, hp = 240, zoc = 480, parry = 16, atkMin = 4",
+            "manaCost = 1, hp = 480, zoc = 480, parry = 32, atkMin = 8",
+            "manaCost = 1, hp = 960, zoc = 480, parry = 64, atkMin = 16",
+            "manaCost = 1, hp = 1920, zoc = 480, parry = 128, atkMin = 32"
+        ],
+        "_skills": [
+            {
+                "name": null,
+                "desc": null,
+                "id": "holyArrow",
+                "fx": "parFly_holyball",
+                "fxHit": "parHit_magic_holy",
+                "snd": "cast castHoly, hit hitHoly, miss missMagic",
+                "data": [
+                    "type = castDir, passBlock=abyss, atkM=5, atkTimes=3, playTime=0.5, flySpeed = 2400, aimError=5",
+                    "type = castDir, passBlock=abyss, atkM=10, atkTimes=3, playTime=0.5, flySpeed = 2400, aimError=5",
+                    "type = castDir, passBlock=abyss, atkM=20, atkTimes=3, playTime=0.5, flySpeed = 2400, aimError=5",
+                    "type = castDir, passBlock=abyss, atkM=40, atkTimes=3, playTime=0.5, flySpeed = 2400, aimError=5",
+                    "type = castDir, passBlock=abyss, atkM=80, atkTimes=3, playTime=0.5, flySpeed = 2400, aimError=5"
+                ]
+            },
+            {
+                "name": "治疗",
+                "desc": "在场时，战场友军治疗{0}生命 #$@0_3+buffLv",
+                "id": "skill_1",
+                "wikiTips": "hp",
+                "fxCast": "parCast_magic_light",
+                "fxHit": "parHit_buffHeal",
+                "snd": "cast castHeal",
+                "castType": "objStay, aimSelf, caster isSelf",
+                "exData": "posSelf skipSelf",
+                "data": [
+                    "type = buff, hitRadius = 4000"
+                ],
+                "buffs": [
+                    "objStay target hpAdd 6 0",
+                    "objStay target hpAdd 12 0",
+                    "objStay target hpAdd 24 0",
+                    "objStay target hpAdd 48 0",
+                    "objStay target hpAdd 96 0"
+                ]
+            },
+            {
+                "name": "风林之曲",
+                "desc": "入场时，全体友军攻击+{0}，必伤+{1} #$@0_3+buffLv $@1_3+buffLv",
+                "id": "skill_1",
+                "wikiTips": "atk atkMin",
+                "fxCast": "parCast_music",
+                "snd": "cast castMusic",
+                "castType": "objEnter, aimSelf, caster isSelf",
+                "exData": "posSelf",
+                "data": [
+                    "type = buff, hitRadius = 4000"
+                ],
+                "buffs": [
+                    "objEnter target atkAdd 2 2, objEnter target atkMinAdd 1 1",
+                    "objEnter target atkAdd 4 4, objEnter target atkMinAdd 2 2",
+                    "objEnter target atkAdd 8 8, objEnter target atkMinAdd 4 4",
+                    "objEnter target atkAdd 16 16, objEnter target atkMinAdd 8 8",
+                    "objEnter target atkAdd 32 32, objEnter target atkMinAdd 16 16"
+                ]
+            },
+            {
+                "name": "翼之歌",
+                "desc": "在场时，每打出buff或辅助牌，己方全体移速+{0:0%}，射击+{1} #$@0_2 $@1_2",
+                "id": "skill_2",
+                "wikiTips": "speed atkTimes",
+                "fxCast": "parCast_area_wind",
+                "snd": "cast buff_ap",
+                "castType": "cardFire, aimSelf, isCardSkill, cardTag buff ast",
+                "data": [
+                    "type = buff"
+                ],
+                "buffs": [
+                    "#ally speed +0.1, #ally atkTimes +0.5",
+                    "#ally speed +0.15, #ally atkTimes +0.5",
+                    "#ally speed +0.2, #ally atkTimes +0.75",
+                    "#ally speed +0.25, #ally atkTimes +0.75",
+                    "#ally speed +0.3, #ally atkTimes +1"
+                ]
+            }
+        ],
+        "_initSkills": "skill_2=0",
+        "_campSkillCmd": "heal all 0.35, snd castHeal",
+        "_initPersonality": "warm",
+        "_initAge": 10,
+        "_initAgeMax": 100,
+        "_campSkillDesc": "全体成员恢复35%生命"
     },
 ]

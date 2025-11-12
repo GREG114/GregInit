@@ -1,52 +1,67 @@
 [
 	{
-		"_id": "mon_goblin1",
+		"_id": "mon_goblin2sp",
 		"_name": "脑残女刀客",
-		"_desc": "自幼投敌哥布林",
-        "_showSize": 60,
-        "_colSize": 56,
+		"_desc": "自幼投敌哥布林,成为了压寨夫人",
+        "_showSize": 80,
+        "_colSize": 80,		
         "_img": "GregRes/enemy_katana_ic.png",
-		"_cardImg": "GregRes/enemy_katana.png",
-		"_imgFaceR": false,
-        "_sndType": "FCS18",
-        "_snd": "+0.02|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
-      "_powerCost": 1,
-		"_tag": "goblin zaku melee",
-		"_data": [
-			"hp = 20, randAtk = 3",
-			"hp = 40, randAtk = 6",
-			"hp = 50, randAtk = 12",
-			"hp = 80, randAtk = 24",
-			"hp = 160, randAtk = 48"
-		],
-		"_skills": [
-			{
-				"id": "base",
-				"fxCast": "parCast_move",
-				"fxHit": "parHit_base_gold",
-				"snd": "hit stab~3, miss miss~3",
-				"data": [
-					"type = charge, atk = 1, chargeSpeed = 1200, chargeEnd = 2",
-					"type = charge, atk = 2, chargeSpeed = 1200, chargeEnd = 2",
-					"type = charge, atk = 4, chargeSpeed = 1200, chargeEnd = 2",
-					"type = charge, atk = 8, chargeSpeed = 1200, chargeEnd = 2",
-					"type = charge, atk = 16, chargeSpeed = 1200, chargeEnd = 2"
-				],
-			},
-			{
-				"id": "skill_1",
-				"name": "慌乱",
-				"desc": "只会到处乱跑",
-				"ani": "start async col shake 1 8",
-				"castType": "objKill, aimSelf, target isAlly, caster isEnemy, !self hasBuff faint, rate 0.05",
-				"data": ["type = buff"],
-				"buffs":[
-					"faint",
-					]
-			}
-		],
-		"_ai": [
-			"rand 65"
-		]
+        "_cardImg": "GregRes/enemy_katana.png",
+		"_imgFaceR": false,		
+        -- "_snd": "-0.04|hit humanF_hit~2, hitL humanF_hitL~2, die humanF_die",
+		"_sndType": "FCS23",
+    	"_snd": "+0.035|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
+        "_powerCost": 10,
+        "_tag": "hide melee",
+        "_data": [
+            "hp = 150, randAtk = 6",
+            "hp = 300, randAtk = 12",
+            "hp = 600, randAtk = 24",
+            "hp = 1200, randAtk = 48",
+            "hp = 2400, randAtk = 96"
+        ],
+        "_skills": [
+            {
+                "name": null,
+                "desc": null,
+                "id": "base",
+                "fxCast": "parCast_move",
+                "fxHit": "parHit_punch_gold",
+                "snd": "hit punch~3, miss swingH~3",
+                "data": [
+                    "type = charge, hitPower = 240, atk = 7, chargeSpeed = 1600, chargeEnd = 1.5",
+                    "type = charge, hitPower = 240, atk = 14, chargeSpeed = 1600, chargeEnd = 1.5",
+                    "type = charge, hitPower = 240, atk = 28, chargeSpeed = 1600, chargeEnd = 1.5",
+                    "type = charge, hitPower = 240, atk = 56, chargeSpeed = 1600, chargeEnd = 1.5",
+                    "type = charge, hitPower = 240, atk = 112, chargeSpeed = 1600, chargeEnd = 1.5"
+                ],
+                "buffs": [
+                    "objHit self speedDec 300 0"
+                ]
+            },
+            {
+                "name": null,
+                "desc": null,
+                "id": "skill_1",
+                "ani": "cast async col punch 0.1 40",
+                "fx": "fly fx_rock Ox0.5 1 1 1 false false",
+                "fxHit": "parHit_rock",
+                "fxEnd": "parHit_rock",
+                "snd": "cast castRock, hit hitRock, miss hitRock",
+                "data": [
+                    "type=castDir, passBlock=abyss, atk=6, playTime=0.5, flyCol=40, hitRadius=160, aimError=15, atkTimes = 3",
+                    "type=castDir, passBlock=abyss, atk=12, playTime=0.5, flyCol=40, hitRadius=160, aimError=15, atkTimes = 3",
+                    "type=castDir, passBlock=abyss, atk=24, playTime=0.5, flyCol=40, hitRadius=160, aimError=15, atkTimes = 3",
+                    "type=castDir, passBlock=abyss, atk=48, playTime=0.5, flyCol=40, hitRadius=160, aimError=15, atkTimes = 3",
+                    "type=castDir, passBlock=abyss, atk=96, playTime=0.5, flyCol=40, hitRadius=160, aimError=15, atkTimes = 3"
+                ]
+            }
+        ],
+        "_ai": [
+            "atk, atk, stay, cast",
+            "cast, cast, stay, atk",
+            "atk, stay, cast, rand"
+        ],
+        "_campSkillDesc": null
 	},
 ]
