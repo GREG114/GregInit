@@ -73,7 +73,7 @@
 	{
         "_name": "短发女忍者",
         "_desc": " ",
-        "_id": "zaku_base_kunai",
+        "_id": "zaku_base_sling",
         "_pfb": "char",
         "_img": "GregRes/npc_dagger_ic.png",
         "_cardImg": "GregRes/npc_dagger.png",
@@ -217,27 +217,27 @@
         "_campSkillDesc": null
     },
     {
-        "_name": "镜流",
+        "_name": "珍珍",
         "_desc": "裁决之剑",
         "_id": "hero_jingliu",
         "_pfb": "hero",
-        "_img": "GregRes/hero_jingliu_ic.png",
-        "_cardImg": "GregRes/hero_jingliu.png",
+        "_img": "GregRes/hero_daizhen_ic.png",
+        "_cardImg": "GregRes/hero_daizhen.png",
         "_cardBg": "red",
         "_showSize": 60,
         "_colSize": 60,		
         "_tag": "hero melee init",
         "_sort": 0,
         "_trueName": "纯爱天使",
-        "_sndType": "FCS20",
+        "_sndType": "FCS4",
         "_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
         "_equipType": "2Hand mArmor ring necklace shoe helm misc",
         "_data": [
-            "manaCost = 1, hp = 200, zoc = 480, parry = 3, atkMin = 1",
-            "manaCost = 1, hp = 400, zoc = 480, parry = 6, atkMin = 2",
-            "manaCost = 1, hp = 800, zoc = 480, parry = 12, atkMin = 4",
-            "manaCost = 1, hp = 1600, zoc = 480, parry = 24, atkMin = 8",
-            "manaCost = 1, hp = 3200, zoc = 480, parry = 48, atkMin = 16"
+            "manaCost = 1, hp = 200, zoc = 480, parry = 3, atkMin = 1, thorns = 2",
+            "manaCost = 1, hp = 400, zoc = 480, parry = 6, atkMin = 2, thorns = 4",
+            "manaCost = 1, hp = 800, zoc = 480, parry = 12, atkMin = 4, thorns = 8",
+            "manaCost = 1, hp = 1600, zoc = 480, parry = 24, atkMin = 8, thorns = 16",
+            "manaCost = 1, hp = 3200, zoc = 480, parry = 48, atkMin = 16, thorns = 32"
         ],
         "_skills": [
             {
@@ -273,22 +273,6 @@
                 ]
             },
             {
-                "name": "少女怪力",
-                "desc": "在场时，攻击牌伤害+{0:0%} #$@0_3",
-                "id": "skill_2",
-                "castType": "objStay, aimSelf, caster isSelf",
-                "data": [
-                    "type = buff"
-                ],
-                "buffs": [
-                    "#card atk atkX +0.5",
-                    "#card atk atkX +0.6",
-                    "#card atk atkX +0.7",
-                    "#card atk atkX +0.85",
-                    "#card atk atkX +1.0"
-                ]
-            },
-            {
                 "name": "裁决之剑",
                 "desc": "击中敌人时，额外召唤圣剑刺向敌人",
                 "id": "skill_3",
@@ -304,6 +288,22 @@
                     "type = castDir, passBlock=abyss wall block, flySpread = -100, pierce = 2, atk=24, playTime=0, atkTimes=1, aimError = 32, flyCol=40",
                     "type = castDir, passBlock=abyss wall block, flySpread = -100, pierce = 2, atk=48, playTime=0, atkTimes=1, aimError = 32, flyCol=40"
                 ]
+            },
+            {
+                "name": "剑刃旋风",
+                "desc": "突击时持续发动旋风斩",
+                "id": "skill_3",
+                "fx": "aoe_slashCircle gfx_slashCircle Ox2 1 1 1 false true #ffffdfff",
+                "fxHit": "parHit_base_gold",
+                "snd": "cast castCircleSlash, hit slash~3, miss miss~3",
+                "castType": "objMove, aimSelf, caster isSelf",
+                "data": [
+                    "type = castPos, hitRadius = 240, playTime = 0.2, atk = 1, atkTimes = -100",
+                    "type = castPos, hitRadius = 240, playTime = 0.2, atk = 2, atkTimes = -100",
+                    "type = castPos, hitRadius = 240, playTime = 0.2, atk = 4, atkTimes = -100",
+                    "type = castPos, hitRadius = 240, playTime = 0.2, atk = 8, atkTimes = -100",
+                    "type = castPos,  hitRadius = 240, playTime = 0.2, atk = 16, atkTimes = -100"
+                ]
             }
         ],
         "_initSkills": "skill_1=0",
@@ -314,7 +314,7 @@
         "_campSkillDesc": "侦察并获得任务地图信息"
     },
     {
-        "_name": "王佩",
+        "_name": "佩洛利亚",
         "_desc": "纯爱之光",
         "_id": "hero_wangpei",
         "_pfb": "hero",
@@ -330,11 +330,11 @@
         "_snd": "+0.03|enter Start~2, enterBad Dying turn~2, atk Weak attack~5, atkL Medium attack~5, atkSA Strong attack~5, hit Damage~5, hitL Large damage~5, die Unable to fight~2, cheer Victory~2, select Choice~2, thanks Thank you~2, lvUp growth_Level up~2",
         "_equipType": "sp clothes ring necklace shoe helm misc",
         "_data": [
-            "manaCost = 1, hp = 120, zoc = 480, parry = 8, atkMin = 2",
-            "manaCost = 1, hp = 240, zoc = 480, parry = 16, atkMin = 4",
-            "manaCost = 1, hp = 480, zoc = 480, parry = 32, atkMin = 8",
-            "manaCost = 1, hp = 960, zoc = 480, parry = 64, atkMin = 16",
-            "manaCost = 1, hp = 1920, zoc = 480, parry = 128, atkMin = 32"
+            "manaCost = 1, hp = 120, zoc = 480, parry = 8, atkMin = 2,buffLv +2",
+            "manaCost = 1, hp = 240, zoc = 480, parry = 16, atkMin = 4,buffLv +4",
+            "manaCost = 1, hp = 480, zoc = 480, parry = 32, atkMin = 8,buffLv +8",
+            "manaCost = 1, hp = 960, zoc = 480, parry = 64, atkMin = 16,buffLv +16",
+            "manaCost = 1, hp = 1920, zoc = 480, parry = 128, atkMin = 32,buffLv +32"
         ],
         "_skills": [
             {
@@ -394,22 +394,20 @@
                 ]
             },
             {
-                "name": "翼之歌",
-                "desc": "在场时，每打出buff或辅助牌，己方全体移速+{0:0%}，射击+{1} #$@0_2 $@1_2",
-                "id": "skill_2",
-                "wikiTips": "speed atkTimes",
-                "fxCast": "parCast_area_wind",
-                "snd": "cast buff_ap",
-                "castType": "cardFire, aimSelf, isCardSkill, cardTag buff ast",
+                "name": "圣盾",
+                "desc": "在场时，己方全体获得{0}层圣盾 #$@0_3",
+                "id": "skill_1",
+                "snd": "cast castHolyShield",
+                "castType": "objStay, aimSelf, caster isSelf",
                 "data": [
-                    "type = buff"
+                    "type = buff, hitRadius = 4096"
                 ],
                 "buffs": [
-                    "#ally speed +0.1, #ally atkTimes +0.5",
-                    "#ally speed +0.15, #ally atkTimes +0.5",
-                    "#ally speed +0.2, #ally atkTimes +0.75",
-                    "#ally speed +0.25, #ally atkTimes +0.75",
-                    "#ally speed +0.3, #ally atkTimes +1"
+                    "holyShield 1 0 3",
+                    "holyShield 1 0 4",
+                    "holyShield 1 0 5",
+                    "holyShield 1 0 6",
+                    "holyShield 1 0 7"
                 ]
             }
         ],
